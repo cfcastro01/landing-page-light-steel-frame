@@ -1,0 +1,288 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+/* CONTAINER GERAL DO SITE */
+.grid-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 40px;
+}
+
+/* HEADER E MENU */
+.header {
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Underline animado nos links do menu */
+/* .nav a {
+  position: relative;
+  text-decoration: none;
+  color: #111;
+} */
+
+/* .nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 1px;
+  background: #111;
+
+  transition: width 0.3s ease;
+} */
+
+/* .nav a:hover::after {
+  width: 100%;
+} */
+
+.logo a {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.login-btn {
+  padding: 8px 14px;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+/* TÍTULO PRINCIPAL (HERO) */
+.titulo {
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 120px;
+}
+
+.titulo span {
+  color: #666;
+  font-weight: 400;
+}
+
+/* ESTRUTURA BASE DAS FEATURES (IMAGENS E TEXTOS) */
+.feature {
+  position: relative;
+  margin: 160px 0;
+}
+
+
+.feature-text {
+  max-width: 520px;
+}
+
+.feature-text h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.feature-text p {
+margin-bottom: 12px;
+color: #444;
+}
+
+/* LAYOUT IMAGEM GRANDE */
+
+.feature img {
+  box-shadow: 0 30px 80px rgba(0,0,0,0.10);
+  cursor: default;
+}
+
+.feature-full .feature-image {
+margin-bottom: 30px;
+}
+
+.feature-full img {
+  width: 100%;
+}
+
+/* Hover suave nas imagens */
+.feature-image img {
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.feature:hover img {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+  cursor: pointer;
+}
+
+/* LAYOUT LADO A LADO */
+
+.feature-side {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+align-items: center;
+}
+
+.feature-side img {
+/* border-radius: 4px; */
+}
+
+/* LAYOUT DUAS IMAGENS LADO A LADO */
+
+.feature-duo {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+}
+
+.feature-duo img {
+width: 100%;
+/* border-radius: 4px; */
+margin-bottom: 20px;
+}
+
+.feature-duo .feature-text {
+max-width: 100%;
+}
+
+/* ALTERNAR IMAGENS AUTOMATICAMENTE */
+
+.feature-side:nth-of-type(even) .feature-image {
+order: 2;
+}
+
+.feature-side:nth-of-type(even) .feature-text {
+order: 1;
+}
+
+/* STAGGER CINEMATOGRÁFICO */
+/* cada bloco da página é deslocado alguns pixels verticalmente para criar um ritmo visual */
+
+.feature:nth-of-type(2) {
+  transform: translateY(40px);
+}
+
+.feature:nth-of-type(3) {
+  transform: translateY(-30px);
+}
+
+.feature:nth-of-type(4) {
+  transform: translateY(50px);
+}
+
+.feature:nth-of-type(5) {
+  transform: translateY(-20px);
+}
+
+/* FAQ */
+.faq {
+max-width: 800px;
+margin: 0 auto;
+padding: 80px 20px;
+}
+
+.faq h2 {
+font-family: "Space Grotesk", sans-serif;
+font-size: 2rem;
+margin-bottom: 40px;
+}
+
+.faq-item {
+margin-bottom: 30px;
+}
+
+.faq-item h3 {
+font-size: 1.1rem;
+margin-bottom: 10px;
+}
+
+.faq-item p {
+color: #555;
+}
+
+/* CONTATO */
+.contato {
+text-align: center;
+padding: 80px 20px;
+}
+
+.contato h2 {
+font-family: "Space Grotesk", sans-serif;
+font-size: 2rem;
+margin-bottom: 20px;
+}
+
+/* FOOTER */
+.footer {
+border-top: 1px solid #eee;
+margin-top: 80px;
+}
+
+.footer p {
+text-align: center;
+padding: 30px;
+font-size: 0.9rem;
+color: #666;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+.feature-side {
+grid-template-columns: 1fr;
+gap: 30px;
+}
+
+.titulo {
+margin-bottom: 60px;
+}
+
+.feature {
+margin-bottom: 80px;
+}
+
+}
